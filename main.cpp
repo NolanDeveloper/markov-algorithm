@@ -100,7 +100,7 @@ algorithm::algorithm(istream & is) {
     }
 }
 
-// Retruns false if application was final or there wasn't application and true otherwise.
+// If some substitions was applied returns pointer to it, otherwise returns nullptr.
 const substitution * algorithm::apply(string & word) const {
     for (auto & s : _substitutions)
         if (s.apply(word))
